@@ -59,6 +59,14 @@ C       CONDITION TO REACH CLOSER TO THE EIGEN VALUE
         WRITE(*,*)'   NODES    ENERGY (a.u)'
 C       WRITING THE NUMBER OF NODES AND ENERGY
         WRITE(*,5)  NQ-L-1 ,E
+        
+C       PROBABILITY DISTRIBUTION.....
+        DO II=1,M
+ 10     FORMAT(10,(4X,I5,6X,E20.7))
+        WRITE(*,*) II, (F(II+1))**2
+        ENDDO
+        
+        
         STOP
         END
 
